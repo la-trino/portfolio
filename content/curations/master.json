@@ -1,0 +1,14 @@
+{
+  "id": "master",
+  "title": "Selected Work",
+  "description": "The canonical portfolio project selection.",
+  "status": "draft",
+  "projects": [
+    {
+      "slug": "un-paso-adelante",
+      "visible": true,
+      "order": 1
+    }
+  ]
+}
+

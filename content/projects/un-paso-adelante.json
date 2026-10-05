@@ -1,0 +1,33 @@
+{
+  "slug": "un-paso-adelante",
+  "title": "Un Paso Adelante",
+  "subtitle": "Healthcare brand identity campaign",
+  "year": "2025",
+  "status": "draft",
+  "disciplines": [
+    "Graphic Design",
+    "Art Direction"
+  ],
+  "summary": "A professional case study structured around the project brief, creative direction, final applications, and production credits.",
+  "credits": [
+    {
+      "role": "Creative direction",
+      "name": "Trinidad Cornejo"
+    },
+    {
+      "role": "Photography",
+      "name": "To be confirmed"
+    }
+  ],
+  "thumbnail": {
+    "type": "image",
+    "cloudinaryPublicId": "",
+    "width": null,
+    "height": null,
+    "alt": "",
+    "caption": "",
+    "credits": ""
+  },
+  "media": []
+}
+

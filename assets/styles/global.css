@@ -1,0 +1,165 @@
+:root {
+  --color-background: #d3d3d3;
+  --color-surface: #aaaaaa;
+  --color-text: #101010;
+  --color-line: #737373;
+  --color-accent: #a58793;
+  --font-sans: Arial, Helvetica, sans-serif;
+  --page-inline: clamp(1rem, 10vw, 10rem);
+  --header-height: 4rem;
+  --grid-column-gap: 15px;
+  --grid-row-gap: 10px;
+  --transition-fast: 160ms ease;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  color: var(--color-text);
+  background: var(--color-background);
+  font-family: var(--font-sans);
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 20rem;
+  min-height: 100vh;
+  margin: 0;
+  font-size: 0.875rem;
+  line-height: 1.25;
+}
+
+a {
+  color: inherit;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+}
+
+a:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 4px;
+}
+
+img,
+picture,
+video,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+.shell {
+  width: min(100% - (2 * var(--page-inline)), 112rem);
+  margin-inline: auto;
+}
+
+.site-header {
+  display: flex;
+  min-height: var(--header-height);
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.site-name,
+.site-nav a,
+.site-footer a {
+  text-decoration: none;
+}
+
+.site-name {
+  font-weight: 500;
+}
+
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: clamp(1rem, 3vw, 3.5rem);
+}
+
+.site-nav a,
+.text-link {
+  transition: opacity var(--transition-fast);
+}
+
+.site-nav a:hover,
+.text-link:hover {
+  opacity: 0.55;
+}
+
+.site-nav [aria-current="page"] {
+  text-decoration: underline;
+  text-underline-offset: 0.25em;
+}
+
+.placeholder-home {
+  min-height: calc(100vh - (2 * var(--header-height)));
+  padding-block: clamp(5rem, 18vh, 14rem);
+}
+
+.placeholder-home h1 {
+  max-width: 12ch;
+  margin: 0;
+  font-size: clamp(3rem, 9vw, 9rem);
+  font-weight: 400;
+  letter-spacing: -0.055em;
+  line-height: 0.9;
+}
+
+.placeholder-home p {
+  max-width: 42rem;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.site-footer {
+  display: flex;
+  min-height: var(--header-height);
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+@media (max-width: 50rem) {
+  :root {
+    --page-inline: clamp(1rem, 4vw, 2rem);
+  }
+
+  .site-header {
+    align-items: flex-start;
+    padding-block: 1rem;
+  }
+
+  .site-nav {
+    gap: 0.75rem 1.25rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
